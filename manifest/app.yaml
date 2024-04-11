@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: myapp-container
-        image: appfe:latest
+        image: sn257/appfe:v1
         imagePullPolicy: Never
         ports:
         - containerPort: 3000
