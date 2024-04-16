@@ -2,9 +2,10 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   annotations:
+    ingressclass.kubernetes.io/is-default-class: "true"
   name: hoomee.nhatth.com
 spec:
-  ingressClassName: fe-ing
+  ingressClassName: haproxy
   rules:
   - host: hoomee.nhatth.com
     http:
