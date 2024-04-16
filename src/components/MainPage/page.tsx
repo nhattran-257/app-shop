@@ -2,7 +2,7 @@
 export default function MainPage() {
     return (
         <>
-            <section className="content-center bg-gray-800 text-white py-16 w-auto h-[45rem] bg-cover bg-[url(https://theme.hstatic.net/1000363124/1000462158/14/slideshow_1.jpg?v=1764)]">
+            <section className="content-center bg-gray-800 text-white py-16 w-auto h-[44rem] bg-cover bg-[url(https://theme.hstatic.net/1000363124/1000462158/14/slideshow_1.jpg?v=1764)]">
                 <div className="container mx-auto px-4">
                     <div className="max-w-3xl mx-auto text-center">
                         {/* <h2 className="text-4xl font-semibold mb-4">Thời Trang Cho Mọi Người</h2>
