@@ -1,0 +1,45 @@
+# apiVersion: autoscaling/v2 ## HPA 안정성을 위해서 해당 api Version 권장
+# kind: HorizontalPodAutoscaler
+# metadata:
+#   name: {{ .Values.nameservice }} ## 생성할 hpa Name 설정
+# spec:
+#   scaleTargetRef:  ## 타겟 지정
+#     apiVersion: apps/v1  ## 지정한 타겟의 apiVerion
+#     kind: Deployment  ## 지정한 타겟의 종류
+#     name: {{ .Values.nameservice }}  ## 지정한 타겟의 이름
+#   minReplicas: {{ .Values.minrelica }}  ## 최소 replica ( 운영에 필요한 최소 숫자 지정 )
+#   maxReplicas: {{ .Values.maxrelica }}  ## 최대 replica
+#   metrics:
+#   - type: Resource  ##  리소스 메트릭은 Metric 서버에서 제공하는 Pod의 Resource에 대한 메트릭을 의미함
+#     resource:
+#       name: cpu  ## 메트릭 서버에서 CPU 메트릭 확인
+#       target:
+#         type: Utilization  ## CPU의 평균 사용량을 아래의 설정 값인 70%로 유지한다는 설정
+#         averageUtilization: {{ .Values.targetCPUutilization }}  # scale up 기준 값.
+#   - type: Resource
+#     resource:
+#       name: memory
+#       target:
+#         type: Utilization
+#         averageUtilization: {{ .Values.targetRAMutilization }}
+#   behavior:  ## 실제 Pod가 scale in 혹은 scale out 되는 방법에 대한 설정
+#     scaleDown:  ## 스케일 다운
+#       stabilizationWindowSeconds: 10  ## 메트릭이 계속 변경될 때 자주 변경되지 않도록 제한하기 위해 사용 / 설정한 시간동안 계산하여 제일 높은 값을 사용하여 Scaling함
+#       policies:  ## scale down에 관련된 구체적인 정책 설정
+#       - type: Percent  ## 아래의 value의 퍼센트 값만큼 Pod를 줄이는 것
+#         value: 10
+#         periodSeconds: 10  ## 설정한 시간에 한번씩 scale down이 동작
+#       - type: Pods  ## 설정한 value 값만큼 Pod를 줄임
+#         value: 1
+#         periodSeconds: 10 ## 설정한 시간에 한번씩 scale down이 동작
+#       selectPolicy: Min  ## 위의 설정한 policies의 type 중 replica의 개수 중 가장 더 적게 변하는 것을 선택하겠다는 의미 (min, max, disabled 선택 가능 - disabled 사용하면 scaling이 전혀 이루어지지 않음)
+#     scaleUp:  ## 스케일 업
+#       stabilizationWindowSeconds: 10 ## 메트릭이 계속 변경될 때 자주 변경되지 않도록 제한하기 위해 사용 / 설정한 시간동안 계산하여 제일 높은 값을 사용하여 Scaling함
+#       policies:
+#       - type: Percent  ## 아래의 value의 퍼센트 값만큼 Pod를 줄이는 것
+#         value: 10  
+#         periodSeconds: 10  ## 설정한 시간에 한번씩 scale up이 동작
+#       - type: Pods  ## 설정한 value 값만큼 Pod를 줄임
+#         value: 1
+#         periodSeconds: 10 ## 설정한 시간에 한번씩 scale up이 동작
+#       selectPolicy: Min  ## 위의 설정한 policies의 type 중 replica의 개수 중 가장 더 적게 변하는 것을 선택하겠다는 의미 (min, max, disabled 선택 가능 - disabled 사용하면 scaling이 전혀 이루어지지 않음)

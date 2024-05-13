@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.nameservice }}
+  namespace: default
+  labels: {{ include "common.labels" . | indent 4 }}
+spec:
+  replicas: {{ .Values.relica }}
+  selector:
+    matchLabels: {{ include "common.labels" . | indent 6 }}
+  template:
+    metadata:
+      labels: {{ include "common.labels" . | indent 8 }}
+    spec:
+      containers:
+      - name: {{ .Values.nameservice }}
+        namespace: b2c-newgen-fe
+        image: {{ required "A valid .Values.image Isn't Null !" .Values.image }}
+        resources:
+          limits:
+            cpu: {{ .Values.cpu }} 
+            memory: {{ .Values.memory }}
+          requests:
+            cpu: {{ .Values.rqcpu }}
+            memory: {{ .Values.rqmemory }}
+        ports:
+          - containerPort: 3000
+            protocol: TCP
