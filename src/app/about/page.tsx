@@ -16,7 +16,7 @@ export default function ProductPage() {
                                     <span className="block xl:inline">Useful Tools to</span>
                                     <span className="block text-indigo-600 xl:inline">Help You Build Faster.</span>
                                 </h1>
-                                <p className="mx-auto text-base text-gray-500 sm:max-w-md lg:text-xl md:max-w-3xl">It's never been easier to build beautiful websites that convey your message and tell your story.</p>
+                                <p className="mx-auto text-base text-gray-500 sm:max-w-md lg:text-xl md:max-w-3xl">It&apos;s never been easier to build beautiful websites that convey your message and tell your story.</p>
                                 {/* <div className="relative flex flex-col sm:flex-row sm:space-x-4">
                                     <a href="#_" className="flex items-center w-full px-6 py-3 mb-3 text-lg text-white bg-indigo-600 rounded-md sm:mb-0 hover:bg-indigo-700 sm:w-auto">
                                         Try It Free
@@ -100,7 +100,7 @@ export default function ProductPage() {
                         <div className="order-1 w-full px-3 lg:w-1/2 lg:order-0">
                             <div className="w-full lg:max-w-md">
                                 <h2 className="mb-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl font-heading">Jam-packed with all the tools you need to succeed!</h2>
-                                <p className="mb-4 font-medium tracking-tight text-gray-400 xl:mb-6">It's never been easier to build a business of your own. Our tools will help you with the following:</p>
+                                <p className="mb-4 font-medium tracking-tight text-gray-400 xl:mb-6">It&apos;s never been easier to build a business of your own. Our tools will help you with the following:</p>
                                 <ul>
                                     <li className="flex items-center py-2 space-x-4 xl:py-3">
                                         <svg className="w-8 h-8 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" /></svg>
@@ -125,7 +125,7 @@ export default function ProductPage() {
             <section className="flex items-center justify-center py-20 bg-white min-w-screen">
                 <div className="px-16 bg-white">
                     <div className="container flex flex-col items-start mx-auto lg:items-center">
-                        <p className="relative flex items-start justify-start w-full text-lg font-bold tracking-wider text-purple-500 uppercase lg:justify-center lg:items-center">Don't just take our word for it</p>
+                        <p className="relative flex items-start justify-start w-full text-lg font-bold tracking-wider text-purple-500 uppercase lg:justify-center lg:items-center">Don&apos;t just take our word for it</p>
                         <h2 className="relative flex items-start justify-start w-full max-w-3xl text-5xl font-bold lg:justify-center">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="absolute right-0 hidden w-12 h-12 -mt-2 -mr-16 text-gray-200 lg:inline-block" viewBox="0 0 975.036 975.036">
                                 <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z">
@@ -144,7 +144,7 @@ export default function ProductPage() {
                                         <p className="text-gray-600">CEO of Something</p>
                                     </div>
                                 </div>
-                                <blockquote className="mt-8 text-lg text-gray-500">"This is a no-brainer if you want to take your business to the next level. If you are looking for the ultimate toolset, this is it!"</blockquote>
+                                <blockquote className="mt-8 text-lg text-gray-500">&quot;This is a no-brainer if you want to take your business to the next level. If you are looking for the ultimate toolset, this is it!&quot;</blockquote>
                             </div>
                             <div className="flex flex-col items-start justify-start w-full h-auto px-0 mx-0 mb-12 border-l border-r border-transparent lg:w-1/3 lg:mb-0 lg:px-8 lg:mx-8 lg:border-gray-200">
                                 <div className="flex items-center justify-center">
@@ -156,9 +156,9 @@ export default function ProductPage() {
                                         <p className="text-gray-600">CTO of Business</p>
                                     </div>
                                 </div>
-                                <blockquote className="mt-8 text-lg text-gray-500">"Thanks for creating this service. My life is so much
+                                <blockquote className="mt-8 text-lg text-gray-500">&quot;Thanks for creating this service. My life is so much
                                     easier.
-                                    Thanks for making such a great product."</blockquote>
+                                    Thanks for making such a great product.&quot;</blockquote>
                             </div>
                             <div className="flex flex-col items-start justify-start w-full h-auto lg:w-1/3">
                                 <div className="flex items-center justify-center">
@@ -170,9 +170,9 @@ export default function ProductPage() {
                                         <p className="text-gray-600">Creator of Stuff</p>
                                     </div>
                                 </div>
-                                <blockquote className="mt-8 text-lg text-gray-500">"Packed with awesome content and exactly what I was
+                                <blockquote className="mt-8 text-lg text-gray-500">&quot;Packed with awesome content and exactly what I was
                                     looking
-                                    for. I would highly recommend this to anyone."</blockquote>
+                                    for. I would highly recommend this to anyone.&quot;</blockquote>
                             </div>
                         </div>
                     </div>
