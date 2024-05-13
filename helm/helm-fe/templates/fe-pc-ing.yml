@@ -11,7 +11,7 @@ spec:
       paths:
       - backend:
           service:
-            name: myapp-svc
+            name: {{ .Values.nameservice }}
             port:
               number: 8080
         path: /
