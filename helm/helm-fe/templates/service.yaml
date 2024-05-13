@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: {{ .Values.nameservice }}
-  namespace: b2c-newgen-fe
+  namespace: default
 spec:
   selector: {{ include "common.labels" . | indent 4}}
   type: {{ .Values.typesvc }}
