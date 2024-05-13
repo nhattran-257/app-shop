@@ -4,7 +4,7 @@ metadata:
   name: appfe-ing
   namespace: default
 spec:
-  ingressClassName: haproxy
+  ingressClassName: nginx
   rules:
   - host: sn7-clothing.com
     http:
