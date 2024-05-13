@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    ingressclass.kubernetes.io/is-default-class: "true"
+  name: sn7-clothing.com
+spec:
+  ingressClassName: haproxy
+  rules:
+  - host: sn7-clothing.com
+    http:
+      paths:
+      - backend:
+          service:
+            name: myapp-svc
+            port:
+              number: 8080
+        path: /
+        pathType: Prefix

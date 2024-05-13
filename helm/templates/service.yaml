@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: myapp-svc
+spec:
+  type: ClusterIP
+  ports:
+    - name: first-port
+      protocol: TCP
+      port: 3000
+      targetPort: http
+  selector:
+    app: myapp-pod
