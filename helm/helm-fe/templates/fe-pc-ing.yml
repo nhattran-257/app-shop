@@ -13,6 +13,6 @@ spec:
           service:
             name: {{ .Values.nameservice }}
             port:
-              number: 8080
+              number: {{ .Values.port }}
         path: /
         pathType: Prefix
