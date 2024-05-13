@@ -14,6 +14,6 @@ spec:
           service:
             name: myapp-svc
             port:
-              number: 3000
+              number: 8080
         path: /
         pathType: Prefix

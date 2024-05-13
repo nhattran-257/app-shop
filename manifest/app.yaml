@@ -35,7 +35,7 @@ kind: Service
 metadata:
   name: myapp-svc
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   ports:
     - name: first-port
       protocol: TCP
