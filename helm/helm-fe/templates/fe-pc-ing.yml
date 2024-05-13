@@ -6,7 +6,7 @@ metadata:
 spec:
   ingressClassName: haproxy
   rules:
-  - host: hoomee.nhatth.com
+  - host: sn7-clothing.com
     http:
       paths:
       - backend:
